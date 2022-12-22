@@ -15,7 +15,3 @@ dependencies:
   simple_dart_label: ^0.0.1
   simple_dart_tabs_panel: ^0.0.1
   simple_dart_ui_core: ^0.0.2
-
-dev_dependencies:
-  build_runner: ^2.3.2
-  build_web_compilers:

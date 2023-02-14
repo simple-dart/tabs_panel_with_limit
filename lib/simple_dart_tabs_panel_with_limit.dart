@@ -31,7 +31,7 @@ class TabsPanelWithLimit extends PanelComponent
     add(tagsPanel);
     overMaxTabsButton.onClick.listen((e) {
       final list = overMaxTags.map((t) => t.caption).toList();
-      contextMenu.showContextMenu(list, e.client.x, e.client.y).then((action) {
+      contextMenu.showContextMenu(list, e.client.x.toInt(), e.client.y.toInt()).then((action) {
         final selectedTag = overMaxTags.firstWhere((t) => t.caption == action);
         currentTag = selectedTag;
         overMaxTabsButton.caption = '${selectedTag.caption} +${overMaxTags.length}';

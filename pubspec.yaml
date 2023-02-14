@@ -1,6 +1,6 @@
 name: simple_dart_tabs_panel_with_limit
 description: Tabs Panel Component with limit button.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/simple-dart/tabs_panel_with_limit
 platforms:
   web:
@@ -11,7 +11,7 @@ environment:
 
 dependencies:
   simple_dart_button: ^0.0.2
-  simple_dart_context_menu: ^0.0.1
+  simple_dart_context_menu: ^0.0.2
   simple_dart_label: ^0.0.1
   simple_dart_tabs_panel: ^0.0.2
   simple_dart_ui_core: ^0.0.2

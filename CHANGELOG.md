@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Fix overMaxButton style
+
 ## 0.0.3
 
 - Update contextMenu to 0.0.2

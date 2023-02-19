@@ -15,6 +15,7 @@ class TabsPanelWithLimit extends PanelComponent
   Panel tagsPanel = Panel()
     ..addCssClass('TabTagsPanel')
     ..spacing = '1px'
+    ..vAlign = Align.center
     ..wrap = true;
   List<AbstractTabTag> tags = <AbstractTabTag>[];
   List<AbstractTabTag> overMaxTags = <AbstractTabTag>[];
@@ -34,7 +35,9 @@ class TabsPanelWithLimit extends PanelComponent
       contextMenu.showContextMenu(list, e.client.x.toInt(), e.client.y.toInt()).then((action) {
         final selectedTag = overMaxTags.firstWhere((t) => t.caption == action);
         currentTag = selectedTag;
-        overMaxTabsButton.caption = '${selectedTag.caption} +${overMaxTags.length}';
+        overMaxTabsButton
+          ..caption = '${selectedTag.caption} +${overMaxTags.length}'
+          ..active = true;
       });
     });
   }
@@ -45,12 +48,16 @@ class TabsPanelWithLimit extends PanelComponent
       tags.add(newTabTag);
       newTabTag.element.onClick.listen((event) {
         currentTag = newTabTag;
-        overMaxTabsButton.caption = '+${overMaxTags.length}';
+        overMaxTabsButton
+          ..caption = '+${overMaxTags.length}'
+          ..active = false;
       });
     } else {
       tagsPanel.add(overMaxTabsButton);
       overMaxTags.add(newTabTag);
-      overMaxTabsButton.caption = '+${overMaxTags.length}';
+      overMaxTabsButton
+        ..caption = '+${overMaxTags.length}'
+        ..active = false;
     }
     return newTabTag;
   }
